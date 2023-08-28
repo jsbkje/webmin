@@ -89,15 +89,8 @@ else
   echo "${RED}Error:${NORMAL} Unknown OS : $osid"
   exit
 fi
+##############################
 
-# Ask first
-if [ "$1" != "-f" ] && [ "$1" != "--force" ]; then
-  printf "Setup repository? (y/N) "
-  read -r sslyn
-  if [ "$sslyn" != "y" ] && [ "$sslyn" != "Y" ]; then
-    exit
-  fi
-fi
 
 # Check for wget or curl or fetch
 if [ ! -x "$download_wget" ]; then
